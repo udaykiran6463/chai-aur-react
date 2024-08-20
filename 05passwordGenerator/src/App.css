@@ -1,0 +1,42 @@
+/* Base styles */
+#screen {
+    min-height: 100vh;
+}
+
+#box {
+    max-width: 90%;
+
+    /* Adjust the width for larger screens */
+    @media (min-width: 768px) {
+        width: 50%;
+    }
+
+    @media (min-width: 1024px) {
+        width: 33%;
+    }
+}
+
+/* Ensure the text input box is responsive */
+#inputBox {
+    width: 100%;
+}
+
+/* Responsive design for checkboxes */
+#ticks {
+    width: 100%;
+}
+
+/* Additional responsive styles */
+@media (min-width: 768px) {
+    .text-lg {
+        font-size: 1.125rem;
+        /* Adjust font size for medium screens */
+    }
+}
+
+@media (min-width: 1024px) {
+    .text-5xl {
+        font-size: 3rem;
+        /* Adjust font size for large screens */
+    }
+}

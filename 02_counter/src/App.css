@@ -1,0 +1,47 @@
+/* Styling for the container */
+.counter-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, sans-serif;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 85vh;
+}
+
+.heading{
+  color: rebeccapurple;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  text-align: center;
+}
+
+/* Styling for the minus and plus buttons */
+.counter-button {
+  cursor: pointer;
+  padding: 10px 15px;
+  margin: 0 5px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  background-color: #f0f0f0;
+  color: #555;
+  font-size: 18px;
+  transition: all 0.3s;
+  user-select: none;
+}
+
+.counter-button:hover {
+  background-color: #e0e0e0;
+  border-color: #999;
+  color: #333;
+}
+
+/* Styling for the value display */
+.counter-value {
+  font-size: 28px;
+  font-weight: bold;
+  margin: 0 15px;
+  color: #333;
+  user-select: none;
+}
