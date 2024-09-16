@@ -13,7 +13,7 @@ function customRender(reactEle, container){
     const domEle = document.createElement(reactEle.type)
     domEle.innerHTML = reactEle.children
     for (const prop in reactEle.props) {
-        if(prop === 'children') continue;
+        if(prop === 'children') continue; // just for saftey, incase children is inside the props
         domEle.setAttribute(prop,reactEle.props[prop]);
     }
     container.appendChild(domEle);
