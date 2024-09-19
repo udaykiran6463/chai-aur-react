@@ -1,6 +1,4 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
@@ -8,15 +6,16 @@ function App() {
 
   function decrement(e){
     e.preventDefault();
+    if(val > 0){
       setValue(val-1);
+    }
   }
   
   function increment(e){
     e.preventDefault();
-      setValue((preVal)=>preVal+1);
-      setValue((preVal)=>preVal+1);
-      setValue((preVal)=>preVal+1);
-      setValue((preVal)=>preVal+1);
+    if(val < 20){
+      setValue(val+1)
+    }
   }
 
   return (
