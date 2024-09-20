@@ -24,16 +24,27 @@ function App() {
         setPassword(pass);
     }, [value, numberAllowed, charAllowed, symbolAllowed, setPassword]);
 
+    // useEffect(() => {
+    //     passwordGenerator()
+    // }, [length, numberAllowed, charAllowed, passwordGenerator])
+
+    const isInitialRender = useRef(true);
     useEffect(() => {
-        passwordGenerator()
-    }, [length, numberAllowed, charAllowed, passwordGenerator])
+        if (isInitialRender.current) {
+            isInitialRender.current = false; 
+        } else {
+            passwordGenerator(); 
+        }
+    }, [value, numberAllowed, charAllowed, passwordGenerator]);
+    
 
     // ref hook using
     const passwordRef = useRef(null)
 
     const copyPasswordToClipboard = useCallback(() => {
         passwordRef.current?.select()
-        passwordRef.current?.setSelectionRange(0, 5)
+        passwordRef.current?.setSelectionRange(0, 8)
+        console.log(passwordRef.current.value);
         window.navigator.clipboard.writeText(Password)
     }, [Password])
 
