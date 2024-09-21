@@ -1,6 +1,5 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import App from './App.jsx'
 import './index.css'
 import { createBrowserRouter, createRoutesFromElements, RouterProvider, Route } from 'react-router-dom'
 import Layout from './Layout.jsx'
@@ -28,7 +27,24 @@ import { useLoaderData } from 'react-router-dom'
 // 			{
 // 				path:"contact",
 // 				element:<ContactUs/>
-// 			}
+// 			},
+// 			{
+// 				path:"github",
+// 				element:<Github/>
+// 			},
+// 			{
+// 				path:"github/:userName",
+// 				element:<Github/>
+// 			},
+// 			{
+// 				path:"user",
+// 				element:<User/>
+// 			},
+// 			{
+// 				path:"user/:userName",
+// 				element:<User/>
+// 			},
+			
 // 		]
 // 	}
 // ])
@@ -42,7 +58,7 @@ const router = createBrowserRouter(
 			<Route path="contact" element={<ContactUs />} />
 			<Route path="user" element={<User/>} />
 			<Route path="user/:userName" element={<User/>} />
-			{/* <Route loader = {} path="github" element={<Github/>} /> */}
+			<Route path="github" element={<Github/>} />
 			<Route path="github/:userName" element={<Github/>} />
 		</Route>
 	)

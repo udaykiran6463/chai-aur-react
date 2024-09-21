@@ -1,9 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import GithubProfile from './GithubProfile';
+import { useLoaderData } from 'react-router-dom';
+
+
+
 
 function Github() {
     const {userName} = useParams()
+
+
+    console.log(userName);
+    
 
     return(
         <div className=''>

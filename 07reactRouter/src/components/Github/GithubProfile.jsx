@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { FaLocationArrow, FaBuilding, FaTwitter, FaBlog } from 'react-icons/fa'; // Import icons
+import { useLoaderData } from 'react-router-dom';
 
 function GithubProfile({ userName }) {
     const [userData, setUserData] = useState(null);
@@ -34,7 +35,7 @@ function GithubProfile({ userName }) {
     const { name, avatar_url, url, bio, public_repos, followers, following, location, blog, twitter_username, company } = userData;
 
     return (
-        <div className="flex flex-col items-center justify-center h-[40rem] bg-gray-900 text-gray-100">
+        <div className="flex flex-col items-center justify-center h-[45rem] bg-gray-900 text-gray-100">
             <div className="w-full max-w-2xl mx-auto p-6 bg-gray-800 rounded-lg shadow-lg">
                 <div className="flex items-center space-x-4 mb-4">
                     <img className="rounded-full border-2 border-rose-500" src={avatar_url} alt={`${name}'s avatar`} width="150" height="150" />
