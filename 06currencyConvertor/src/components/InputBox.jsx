@@ -31,7 +31,7 @@ function InputBox({
                     className='text-lg px-2 py-1'
                     placeholder='Amount'
                     disabled={amountDisable}
-                    value={amount}
+                    value={amount !== undefined ? amount : 0}
                     onChange={(e) => onAmountChange && onAmountChange(Number(e.target.value))}/>
             </div>
             <div id='currency' className='flex flex-col w-1/3 p-2 gap-5'>

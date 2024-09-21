@@ -8,7 +8,7 @@ function useCurrencyInfo(currency){
         .then((res)=>setData(res[currency]))
         .catch((err)=>err)
     }, [currency])
-    // console.log(data);
+    console.log('inside the useCurrency hook');
     return data
 }
 
