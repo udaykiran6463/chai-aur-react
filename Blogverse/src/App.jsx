@@ -4,7 +4,7 @@ import config from './config/config.js'; // Ensure this file exists and is confi
 import { useDispatch } from 'react-redux';
 import authServices from './appwrite/auth.js'; // Ensure this file exports the expected functions
 import { login, logout } from './store/features/authSlice.js'; // Ensure these actions are defined correctly
-import { Header, Footer } from './components/index.components.js'; // Ensure Header and Footer are exported correctly
+import { Header, Footer, LoadingPage } from './components/index.components.js'; // Ensure Header and Footer are exported correctly
 
 function App() {
     const [loading, setLoading] = useState(true);
@@ -29,17 +29,19 @@ function App() {
 
     return !loading ? 
     (
-        <div>
-            <Header></Header>
-            <main>
-                {/* <Outlet />  */}
+        <div className='min-h-screen flex flex-col'>
+            <Header />
+            <main className='flex-grow'>
+                {/* Your main content here */}
                 main
             </main>
-            <Footer /> 
+            <Footer />
         </div>
-    ): 
+    ) : 
     (
-        <div>Loading...</div> 
+        <div>
+            <LoadingPage/>
+        </div> 
     );
 }
 
